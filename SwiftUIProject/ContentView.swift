@@ -24,6 +24,9 @@ struct ContentView: View {
     
     var body: some View {
         
+        // Zstack contains ( background image -> scrollView
+        // scrollView contains ( VStack with Logo -> VStack contains  (HStack Login + HStack Password fields) -> Login Button))
+        
         ZStack{
             GeometryReader { _ in
                 Image("swift-og")
@@ -78,8 +81,6 @@ struct ContentView: View {
     }
 }
         
-  
-
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
