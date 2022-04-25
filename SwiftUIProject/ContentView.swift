@@ -67,11 +67,28 @@ struct ContentView: View {
                 .disabled(login.isEmpty || password.isEmpty)
             }
         }
+        .onReceive(keyboardIsOnPublisher) { isKeyBoardOn in
+            withAnimation(Animation.easeInOut(duration: 0.5)) {
+                self.shouldShowLogo = !isKeyBoardOn
+            }
+        }
+        .onTapGesture {
+            UIApplication.shared.endEditing()
+        }
     }
 }
+        
+  
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+    }
+}
+
+
+extension UIApplication {
+    func endEditing() {
+        sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
     }
 }
