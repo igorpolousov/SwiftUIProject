@@ -8,32 +8,27 @@
 import SwiftUI
 import Combine
 
-class Friend:Identifiable {
-    
-    let id: UUID = UUID()
-    let firstName: String
-    let secondName: String
-    
-    internal init(firstName: String, secondName: String) {
-        self.firstName = firstName
-        self.secondName = secondName
-    }
-}
-
 struct MainView: View {
-    
-    @State private var friends: [Friend] = [
-    Friend(firstName: "Гена", secondName: "Крокодил"),
-    Friend(firstName: "Чебурашка", secondName: "Знатный"),
-    Friend(firstName: "Винни", secondName: "Пух")
-    ]
     
     var body: some View {
         
-        List(friends.sorted(by: {$0.firstName < $1.firstName})) { friend in
-            Text("\(friend.firstName) \(friend.secondName)")
+        TabView {
+            FriendsView()
+                .tabItem {
+                    Image(systemName: "person")
+                    Text("Friends")
+                }
+            GroupsView()
+                .tabItem {
+                    Image(systemName: "person.3.fill")
+                    Text("Groups")
+                }
+            FriendPhotoView()
+                .tabItem {
+                    Image(systemName: "tray.2")
+                    Text("Friend photo")
+                }
         }
-        .navigationTitle("Friends")
     }
 }
 
