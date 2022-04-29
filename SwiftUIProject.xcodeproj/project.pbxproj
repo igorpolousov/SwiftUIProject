@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		C2868B0A281BE2DC0058B48A /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2868B09281BE2DC0058B48A /* MainView.swift */; };
+		C2868B0E281BF5370058B48A /* ASCollectionView in Frameworks */ = {isa = PBXBuildFile; productRef = C2868B0D281BF5370058B48A /* ASCollectionView */; };
+		C2868B10281BF5370058B48A /* ASCollectionViewDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = C2868B0F281BF5370058B48A /* ASCollectionViewDynamic */; };
 		C2CE6C63281678FE00547219 /* SwiftUIProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CE6C62281678FE00547219 /* SwiftUIProjectApp.swift */; };
 		C2CE6C65281678FE00547219 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CE6C64281678FE00547219 /* LoginView.swift */; };
 		C2CE6C67281678FF00547219 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2CE6C66281678FF00547219 /* Assets.xcassets */; };
@@ -28,6 +30,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2868B0E281BF5370058B48A /* ASCollectionView in Frameworks */,
+				C2868B10281BF5370058B48A /* ASCollectionViewDynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +90,10 @@
 			dependencies = (
 			);
 			name = SwiftUIProject;
+			packageProductDependencies = (
+				C2868B0D281BF5370058B48A /* ASCollectionView */,
+				C2868B0F281BF5370058B48A /* ASCollectionViewDynamic */,
+			);
 			productName = SwiftUIProject;
 			productReference = C2CE6C5F281678FE00547219 /* SwiftUIProject.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +122,9 @@
 				Base,
 			);
 			mainGroup = C2CE6C56281678FE00547219;
+			packageReferences = (
+				C2868B0C281BF5370058B48A /* XCRemoteSwiftPackageReference "ASCollectionView" */,
+			);
 			productRefGroup = C2CE6C60281678FE00547219 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -343,6 +354,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C2868B0C281BF5370058B48A /* XCRemoteSwiftPackageReference "ASCollectionView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apptekstudios/ASCollectionView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C2868B0D281BF5370058B48A /* ASCollectionView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C2868B0C281BF5370058B48A /* XCRemoteSwiftPackageReference "ASCollectionView" */;
+			productName = ASCollectionView;
+		};
+		C2868B0F281BF5370058B48A /* ASCollectionViewDynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C2868B0C281BF5370058B48A /* XCRemoteSwiftPackageReference "ASCollectionView" */;
+			productName = ASCollectionViewDynamic;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C2CE6C57281678FE00547219 /* Project object */;
 }
