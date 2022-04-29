@@ -103,7 +103,7 @@ struct LoginView_Previews: PreviewProvider {
     }
 }
 
-struct ConteinerView: View {
+struct ContainerView: View {
     @State private var shouldShowMainView: Bool = false
     
     var body: some View {
