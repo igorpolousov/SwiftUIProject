@@ -12,6 +12,8 @@ struct ContentView: View {
     @State private var login = ""
     @State private var password = ""
     @State private var shouldShowLogo: Bool = true
+    @State private var showIncorrectCredentialsWarning = false
+    
     
     // from Combime properties
     private let keyboardIsOnPublisher = Publishers.Merge(
@@ -21,6 +23,14 @@ struct ContentView: View {
             .map {_ in false}
     )
         .removeDuplicates()
+    
+    private func verifyLoginData() {
+        if login == "login" && password == "q" {
+            
+        } else {
+            showIncorrectCredentialsWarning = true
+        }
+    }
     
     var body: some View {
         
@@ -62,7 +72,7 @@ struct ContentView: View {
                     .padding(.top, 50)
                 
                 // Login button
-                Button(action: {print("Hello there")}) {
+                Button(action: verifyLoginData) {
                     Text("Login")
                 }
                 .padding(.top, 50)
@@ -78,6 +88,9 @@ struct ContentView: View {
         .onTapGesture {
             UIApplication.shared.endEditing()
         }
+        .alert(isPresented: $showIncorrectCredentialsWarning) {
+            Alert(title: Text("Error"), message: Text("Incorrect login/password was entered"))
+        }
     }
 }
         
@@ -86,6 +99,8 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
+
 
 
 extension UIApplication {
