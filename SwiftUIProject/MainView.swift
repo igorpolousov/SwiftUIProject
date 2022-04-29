@@ -25,7 +25,7 @@ struct MainView: View {
     @State private var friends: [Friend] = [
     Friend(firstName: "Гена", secondName: "Крокодил"),
     Friend(firstName: "Чебурашка", secondName: "Знатный"),
-    Friend(firstName: "Шапокляк", secondName: "Обыкновенный")
+    Friend(firstName: "Винни", secondName: "Пух")
     ]
     
     var body: some View {
