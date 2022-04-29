@@ -11,7 +11,7 @@ import SwiftUI
 struct SwiftUIProjectApp: App {
     var body: some Scene {
         WindowGroup {
-            LoginView(isUserLoggedIn: .constant(false))
+            ContainerView()
         }
     }
 }

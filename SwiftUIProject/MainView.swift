@@ -23,10 +23,10 @@ struct MainView: View {
                     Image(systemName: "person.3.fill")
                     Text("Groups")
                 }
-            FriendPhotoView()
+           NewsView()
                 .tabItem {
                     Image(systemName: "tray.2")
-                    Text("Friend photo")
+                    Text("News")
                 }
         }
     }

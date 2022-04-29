@@ -9,9 +9,13 @@ import Foundation
 import SwiftUI
 
 struct FriendPhotoView: View {
-    var friendImage = UIImage()
+    //var friendImage: UIImage
+    //var friendImage = UIImage(imageLiteralResourceName: "gena")
+    
     var body: some View {
-        Image("\(friendImage)")
+        HStack {
+            Image("gena")
+        }
     }
 }
 

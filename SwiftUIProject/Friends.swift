@@ -35,3 +35,9 @@ struct FriendsView: View {
         .navigationTitle("Friends")
     }
 }
+
+struct FriendView_Preview: PreviewProvider {
+    static var previews: some View {
+        FriendsView()
+    }
+}

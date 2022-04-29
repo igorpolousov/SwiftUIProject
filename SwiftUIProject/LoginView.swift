@@ -103,22 +103,6 @@ struct LoginView_Previews: PreviewProvider {
     }
 }
 
-struct ContainerView: View {
-    @State private var shouldShowMainView: Bool = false
-    
-    var body: some View {
-        NavigationView {
-            HStack {
-                LoginView(isUserLoggedIn: $shouldShowMainView)
-                
-                NavigationLink(destination: MainView(), isActive: $shouldShowMainView) {
-                    EmptyView()
-                }
-                .navigationTitle("Main screen")
-            }
-        }
-    }
-}
 
 extension UIApplication {
     func endEditing() {
