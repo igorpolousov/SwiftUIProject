@@ -26,7 +26,7 @@ struct LoginView: View {
         .removeDuplicates()
     
     private func verifyLoginData() {
-        if login == "login" && password == "q" {
+        if login == "Login" && password == "1" {
             isUserLoggedIn = true
         } else {
             showIncorrectCredentialsWarning = true
@@ -114,6 +114,7 @@ struct ContainerView: View {
                 NavigationLink(destination: MainView(), isActive: $shouldShowMainView) {
                     EmptyView()
                 }
+                .navigationTitle("Main screen")
             }
         }
     }

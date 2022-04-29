@@ -10,7 +10,14 @@ import Combine
 
 struct MainView: View {
     var body: some View {
-        Text("Hello there")
+        NavigationView {
+            
+            VStack{
+                Text("Hello there")
+            }
+            
+            navigationTitle("Main Screen")
+        }
     }
 }
 
