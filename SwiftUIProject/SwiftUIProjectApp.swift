@@ -11,7 +11,7 @@ import SwiftUI
 struct SwiftUIProjectApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LoginView(isUserLoggedIn: .constant(false))
         }
     }
 }
