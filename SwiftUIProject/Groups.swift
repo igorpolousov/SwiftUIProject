@@ -11,25 +11,30 @@ import Combine
 class Group: Identifiable {
     var id: UUID = UUID()
     var groupName: String
+    var groupImage: UIImage
     
-    internal init(groupName: String) {
+    internal init(groupName: String, groupImage: UIImage) {
         self.groupName = groupName
+        self.groupImage = groupImage
     }
 }
 
 struct GroupsView: View {
     
     @State private var groups: [Group] = [
-        Group(groupName: "Investments"),
-        Group(groupName: "MotorBikes"),
-        Group(groupName: "Travelling")
+        Group(groupName: "Investment", groupImage: UIImage(contentsOfFile: "wti")!),
+        Group(groupName: "Motorsport", groupImage: UIImage(contentsOfFile: "motorsport")!),
+        Group(groupName: "Travalling", groupImage: UIImage(contentsOfFile: "witch")!)
     ]
     
     var body: some View {
         List(groups.sorted(by: {$0.groupName < $1.groupName})) { group in
-            Text("\(group.groupName)")
+            HStack {
+                Image("\(group.groupImage)")
+                Text("\(group.groupName)")
+            }
         }
-        .navigationTitle("Friends")
+        .navigationTitle("Groups")
     }
 }
 
