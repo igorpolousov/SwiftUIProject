@@ -29,14 +29,11 @@ struct MainView: View {
     ]
     
     var body: some View {
-        NavigationView {
-            
-            VStack{
-                Text("Hello there")
-            }
-            
-            navigationTitle("Main Screen")
+        
+        List(friends.sorted(by: {$0.firstName < $1.firstName})) { friend in
+            Text("\(friend.firstName) \(friend.secondName)")
         }
+        .navigationTitle("Friends")
     }
 }
 
