@@ -8,7 +8,26 @@
 import SwiftUI
 import Combine
 
+class Friend:Identifiable {
+    
+    let id: UUID = UUID()
+    let firstName: String
+    let secondName: String
+    
+    internal init(firstName: String, secondName: String) {
+        self.firstName = firstName
+        self.secondName = secondName
+    }
+}
+
 struct MainView: View {
+    
+    @State private var friends: [Friend] = [
+    Friend(firstName: "Гена", secondName: "Крокодил"),
+    Friend(firstName: "Чебурашка", secondName: "Знатный"),
+    Friend(firstName: "Шапокляк", secondName: "Обыкновенный")
+    ]
+    
     var body: some View {
         NavigationView {
             
