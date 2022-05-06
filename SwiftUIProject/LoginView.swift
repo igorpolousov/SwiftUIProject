@@ -8,10 +8,13 @@
 import SwiftUI
 import Combine
 
-struct ContentView: View {
+struct LoginView: View {
     @State private var login = ""
     @State private var password = ""
     @State private var shouldShowLogo: Bool = true
+    @State private var showIncorrectCredentialsWarning = false
+    @Binding var isUserLoggedIn: Bool
+    
     
     // from Combime properties
     private let keyboardIsOnPublisher = Publishers.Merge(
@@ -21,6 +24,15 @@ struct ContentView: View {
             .map {_ in false}
     )
         .removeDuplicates()
+    
+    private func verifyLoginData() {
+        if login == "Login" && password == "1" {
+            isUserLoggedIn = true
+        } else {
+            showIncorrectCredentialsWarning = true
+        }
+        password = ""
+    }
     
     var body: some View {
         
@@ -62,7 +74,7 @@ struct ContentView: View {
                     .padding(.top, 50)
                 
                 // Login button
-                Button(action: {print("Hello there")}) {
+                Button(action: verifyLoginData) {
                     Text("Login")
                 }
                 .padding(.top, 50)
@@ -78,12 +90,16 @@ struct ContentView: View {
         .onTapGesture {
             UIApplication.shared.endEditing()
         }
+        .alert(isPresented: $showIncorrectCredentialsWarning) {
+            Alert(title: Text("Error"), message: Text("Incorrect login/password was entered"))
+        }
     }
 }
         
-struct ContentView_Previews: PreviewProvider {
+struct LoginView_Previews: PreviewProvider {
+   
     static var previews: some View {
-        ContentView()
+        LoginView(isUserLoggedIn: .constant(false))
     }
 }
 
