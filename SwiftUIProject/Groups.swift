@@ -22,7 +22,7 @@ struct GroupsView: View {
     @State private var groups: [Group] = [
         Group(groupName: "Investment"),
         Group(groupName: "Motorsport"),
-        Group(groupName: "Travalling")
+        Group(groupName: "Travelling")
     ]
     
     var body: some View {
