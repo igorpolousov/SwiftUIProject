@@ -7,16 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C2868B0A281BE2DC0058B48A /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2868B09281BE2DC0058B48A /* MainView.swift */; };
+		C2868B12281BF5DF0058B48A /* FriendPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2868B11281BF5DF0058B48A /* FriendPhoto.swift */; };
+		C2868B14281BFC440058B48A /* Friends.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2868B13281BFC440058B48A /* Friends.swift */; };
+		C2868B16281BFC530058B48A /* Groups.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2868B15281BFC530058B48A /* Groups.swift */; };
+		C2868B1A281C0A220058B48A /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2868B19281C0A210058B48A /* ContainerView.swift */; };
+		C2868B1C281C0A8C0058B48A /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2868B1B281C0A8C0058B48A /* NewsView.swift */; };
 		C2CE6C63281678FE00547219 /* SwiftUIProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CE6C62281678FE00547219 /* SwiftUIProjectApp.swift */; };
-		C2CE6C65281678FE00547219 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CE6C64281678FE00547219 /* ContentView.swift */; };
+		C2CE6C65281678FE00547219 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CE6C64281678FE00547219 /* LoginView.swift */; };
 		C2CE6C67281678FF00547219 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2CE6C66281678FF00547219 /* Assets.xcassets */; };
 		C2CE6C6A281678FF00547219 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2CE6C69281678FF00547219 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C2868B09281BE2DC0058B48A /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		C2868B11281BF5DF0058B48A /* FriendPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendPhoto.swift; sourceTree = "<group>"; };
+		C2868B13281BFC440058B48A /* Friends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friends.swift; sourceTree = "<group>"; };
+		C2868B15281BFC530058B48A /* Groups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Groups.swift; sourceTree = "<group>"; };
+		C2868B19281C0A210058B48A /* ContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerView.swift; sourceTree = "<group>"; };
+		C2868B1B281C0A8C0058B48A /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
 		C2CE6C5F281678FE00547219 /* SwiftUIProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2CE6C62281678FE00547219 /* SwiftUIProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIProjectApp.swift; sourceTree = "<group>"; };
-		C2CE6C64281678FE00547219 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C2CE6C64281678FE00547219 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		C2CE6C66281678FF00547219 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C2CE6C69281678FF00547219 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -52,7 +64,13 @@
 			isa = PBXGroup;
 			children = (
 				C2CE6C62281678FE00547219 /* SwiftUIProjectApp.swift */,
-				C2CE6C64281678FE00547219 /* ContentView.swift */,
+				C2868B19281C0A210058B48A /* ContainerView.swift */,
+				C2CE6C64281678FE00547219 /* LoginView.swift */,
+				C2868B09281BE2DC0058B48A /* MainView.swift */,
+				C2868B11281BF5DF0058B48A /* FriendPhoto.swift */,
+				C2868B13281BFC440058B48A /* Friends.swift */,
+				C2868B15281BFC530058B48A /* Groups.swift */,
+				C2868B1B281C0A8C0058B48A /* NewsView.swift */,
 				C2CE6C66281678FF00547219 /* Assets.xcassets */,
 				C2CE6C68281678FF00547219 /* Preview Content */,
 			);
@@ -83,6 +101,8 @@
 			dependencies = (
 			);
 			name = SwiftUIProject;
+			packageProductDependencies = (
+			);
 			productName = SwiftUIProject;
 			productReference = C2CE6C5F281678FE00547219 /* SwiftUIProject.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +131,8 @@
 				Base,
 			);
 			mainGroup = C2CE6C56281678FE00547219;
+			packageReferences = (
+			);
 			productRefGroup = C2CE6C60281678FE00547219 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,8 +159,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C2CE6C65281678FE00547219 /* ContentView.swift in Sources */,
+				C2CE6C65281678FE00547219 /* LoginView.swift in Sources */,
+				C2868B1C281C0A8C0058B48A /* NewsView.swift in Sources */,
+				C2868B0A281BE2DC0058B48A /* MainView.swift in Sources */,
+				C2868B12281BF5DF0058B48A /* FriendPhoto.swift in Sources */,
+				C2868B14281BFC440058B48A /* Friends.swift in Sources */,
 				C2CE6C63281678FE00547219 /* SwiftUIProjectApp.swift in Sources */,
+				C2868B1A281C0A220058B48A /* ContainerView.swift in Sources */,
+				C2868B16281BFC530058B48A /* Groups.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
