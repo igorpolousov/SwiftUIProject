@@ -8,14 +8,7 @@
 import SwiftUI
 import Combine
 
-class Group: Identifiable {
-    var id: UUID = UUID()
-    var groupName: String
-    
-    internal init(groupName: String) {
-        self.groupName = groupName
-    }
-}
+
 
 struct GroupsView: View {
     

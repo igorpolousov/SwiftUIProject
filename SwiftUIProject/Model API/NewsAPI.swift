@@ -6,3 +6,14 @@
 //
 
 import Foundation
+import SwiftUI
+
+struct NewsView: View {
+    
+    var body: some View {
+        VStack {
+            Text("Here you'll see news")
+            Image("wti")
+        }
+    }
+}
