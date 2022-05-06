@@ -12,10 +12,9 @@ import Combine
 
 struct FriendsView: View {
     
-    
     var body: some View {
         List(friends.sorted(by: {$0.firstName < $1.firstName})) { friend in
-            Text("\(friend.firstName) \(friend.secondName)")
+            Text("\(friend.firstName) \(friend.lastName)")
         }
         .navigationTitle("Friends")
     }

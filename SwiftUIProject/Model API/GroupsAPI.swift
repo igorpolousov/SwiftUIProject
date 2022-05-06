@@ -46,10 +46,10 @@ class GroupModelView: ObservableObject {
     var groups: [Group] = []
 
     internal let objectWillChange = ObjectWillChangePublisher()
-    private let APIService = APIService()
+    private let apiService = APIService()
 
     public func fetch() {
-        APIService.getGroups { [self] data in
+        apiService.getGroups { [self] data in
             self.groups = data
             objectWillChange.send()
         }

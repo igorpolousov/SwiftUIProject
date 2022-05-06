@@ -13,15 +13,15 @@ import Combine
 struct GroupsView: View {
     
     @State private var groups: [Group] = [
-        Group(groupName: "Investment"),
-        Group(groupName: "Motorsport"),
-        Group(groupName: "Travelling")
+        Group(screenName: "Investment"),
+        Group(screenName: "Motorsport"),
+        Group(screenName: "Travelling")
     ]
     
     var body: some View {
-        List(groups.sorted(by: {$0.groupName < $1.groupName})) { group in
+        List(groups.sorted(by: {$0.screenName < $1.screenName})) { group in
             
-                Text("\(group.groupName)")
+                Text("\(group.screenName)")
             
         }
         .navigationTitle("Groups")

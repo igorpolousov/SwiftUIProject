@@ -8,6 +8,8 @@
 import Foundation
 import Combine
 
+var friends = [Friend]()
+
 struct FriendItems: Codable {
     var items: [Friend]
 }
@@ -56,10 +58,10 @@ let friendDemoData =  FriendItems(items: [
 
 class FriendModelView: ObservableObject {
     @Published var friends: [Friend] = []
-    private let APIService = APIService()
+    private let apiService = APIService()
 
     public func fetch() {
-        networkService.getFriends { data in
+        apiService.getFriends { data in
             self.friends = data
         }
     }
