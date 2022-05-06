@@ -12,11 +12,6 @@ import Combine
 
 struct FriendsView: View {
     
-    @State private var friends: [Friend] = [
-    Friend(firstName: "Гена", secondName: "Крокодил"),
-    Friend(firstName: "Чебурашка", secondName: "Знатный"),
-    Friend(firstName: "Винни", secondName: "Пух")
-    ]
     
     var body: some View {
         List(friends.sorted(by: {$0.firstName < $1.firstName})) { friend in
