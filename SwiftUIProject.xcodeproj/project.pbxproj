@@ -15,6 +15,7 @@
 		C270ED8E2824FAA50053C4E9 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C270ED8D2824FAA50053C4E9 /* APIService.swift */; };
 		C270ED902824FFB10053C4E9 /* NetworkServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C270ED8F2824FFB10053C4E9 /* NetworkServiceProtocol.swift */; };
 		C270ED92282500000053C4E9 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C270ED91282500000053C4E9 /* WebView.swift */; };
+		C270ED952825069B0053C4E9 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C270ED942825069B0053C4E9 /* ShadowView.swift */; };
 		C2868B0A281BE2DC0058B48A /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2868B09281BE2DC0058B48A /* MainView.swift */; };
 		C2868B12281BF5DF0058B48A /* FriendPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2868B11281BF5DF0058B48A /* FriendPhoto.swift */; };
 		C2868B14281BFC440058B48A /* Friends.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2868B13281BFC440058B48A /* Friends.swift */; };
@@ -36,6 +37,7 @@
 		C270ED8D2824FAA50053C4E9 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		C270ED8F2824FFB10053C4E9 /* NetworkServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceProtocol.swift; sourceTree = "<group>"; };
 		C270ED91282500000053C4E9 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		C270ED942825069B0053C4E9 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		C2868B09281BE2DC0058B48A /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		C2868B11281BF5DF0058B48A /* FriendPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendPhoto.swift; sourceTree = "<group>"; };
 		C2868B13281BFC440058B48A /* Friends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friends.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 				C2868B15281BFC530058B48A /* Groups.swift */,
 				C2868B1B281C0A8C0058B48A /* NewsView.swift */,
 				C270ED91282500000053C4E9 /* WebView.swift */,
+				C270ED93282506760053C4E9 /* Modelds */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -86,6 +89,14 @@
 				C270ED8F2824FFB10053C4E9 /* NetworkServiceProtocol.swift */,
 			);
 			path = "Model API";
+			sourceTree = "<group>";
+		};
+		C270ED93282506760053C4E9 /* Modelds */ = {
+			isa = PBXGroup;
+			children = (
+				C270ED942825069B0053C4E9 /* ShadowView.swift */,
+			);
+			path = Modelds;
 			sourceTree = "<group>";
 		};
 		C2CE6C56281678FE00547219 = {
@@ -214,6 +225,7 @@
 				C2868B1A281C0A220058B48A /* ContainerView.swift in Sources */,
 				C270ED882824F14C0053C4E9 /* GroupsAPI.swift in Sources */,
 				C2868B16281BFC530058B48A /* Groups.swift in Sources */,
+				C270ED952825069B0053C4E9 /* ShadowView.swift in Sources */,
 				C270ED902824FFB10053C4E9 /* NetworkServiceProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
